@@ -1,6 +1,6 @@
-import useLocalStorage from './useLocalStorage'
+import {useLocalStorage} from './useLocalStorage'
 
-export const useDarkMode =()=>{
-
-
+export const useDarkMode =(key, initialValue)=>{
+const [value, setValue] = useLocalStorage(key, initialValue)
+return [value, setValue]
 }
